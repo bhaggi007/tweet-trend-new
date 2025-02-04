@@ -1,5 +1,5 @@
 def registry = 'https://bhaggi.jfrog.io/'
-def imageName = 'bhaggi.jfrog.io/bhaggi-docker-local/ttrend'
+def imageName = 'bhaggi.jfrog.io/artifactory/bhaggi-docker-local/ttrend'
 def version   = '2.1.4'
 pipeline {
     agent {
@@ -60,7 +60,7 @@ pipeline {
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
-                docker.withRegistry(registry+"/artifactory", 'jfrog_creds'){
+                docker.withRegistry(registry, 'jfrog_creds'){
                     app.push()
                 }    
                echo '<--------------- Docker Publish Ended --------------->'  
