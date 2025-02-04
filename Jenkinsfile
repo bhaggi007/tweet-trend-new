@@ -60,7 +60,7 @@ pipeline {
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
-                docker.withRegistry(registry, 'jfrog_creds'){
+                docker.withRegistry(registry+"/artifactory", 'jfrog_creds'){
                     app.push()
                 }    
                echo '<--------------- Docker Publish Ended --------------->'  
