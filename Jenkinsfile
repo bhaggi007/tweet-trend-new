@@ -1,5 +1,5 @@
 def registry = 'https://bhaggi.jfrog.io/'
-def imageName = 'bhaggi.jfrog.io/artifactory/bhaggi-docker-local/ttrend'
+def imageName = 'bhaggi.jfrog.io/bhaggi-docker-local/ttrend'
 def version   = '2.1.4'
 pipeline {
     agent {
